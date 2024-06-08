@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+div {
+    text-align: center;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+#recipeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recipe-item {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: calc(50% - 20px); /* Two items per row with spacing */
+    max-width: 800px; /* Maximum width for each item */
+    text-align: left;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and border do not increase width */
+}
+
+.recipe-item img {
+    max-width: 100%;
+}
+
+.recipe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.ingredients {
+    padding: 0;
+    list-style-type: none; /* Remove default list styles */
+}
+
+.ingredients li {
+    margin-bottom: 5px; /* Adjust spacing between ingredients */
+}

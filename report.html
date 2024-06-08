@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="report.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="icon">
+            <a href="./index.html"> <img src="./images/logo1.png" class="logo" alt="" width="230" height="75"></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./food.html">FOOD</a></li>
+                <li><a href="diet.html">DIET</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+                <li><a href="community.html">COMMUNITY</a></li>
+                <li><a href="./api.html">SEARCH</a></li>
+            </ul>
+        </div>
+    </div>
+     
+    <div class="container" style="height: 600px;width: 400px;">
+        <center>
+            <h2>HEALTH REPORT</h2>
+            <div id="userLogin">
+                <input type="text" id="patientName" placeholder="Patient Name" style="height: 1cm; width: 7cm;">
+                <br>
+                <br>
+                <input type="number" id="patientAge" placeholder="Patient Age" style="height: 1cm; width: 7cm;">
+                <br>
+                <br>
+                <input type="text" id="healthCondition" placeholder="Health Condition" style="height: 1cm; width: 7cm;">
+                <br>
+                <br>
+                <input type="text" id="bloodPressure" placeholder="Blood Pressure" style="height: 1cm; width: 7cm;">
+                <br>
+                <br>
+                <input type="text" id="sugarLevel" placeholder="Sugar Level" style="height: 1cm; width: 7cm;">
+                <br>
+                <br>
+                <input type="text" id="dnaReport" placeholder="DNA Report" style="height: 1cm; width: 7cm;">
+                <br>
+                <br>
+                <input type="text" id="gutMicrobiomes" placeholder="Gut Microbiomes" style="height: 1cm; width: 7cm;">
+                <br>
+                <br>
+                <input type="text" id="hemoglobinLevel" placeholder="Hemoglobin Level" style="height: 1cm; width: 7cm;">
+                <br>
+                <br>
+                <button onclick="addPatientData()">Submit</button>
+            </div>
+        </div>
+        </center>
+        <br>
+    <div class="contianer">
+        <div id="recipeSuggestions"></div>
+    </div>
+    
+    
+    <script src="report.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+div {
+    text-align: center;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+
+#analysisContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.analysis-item {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.analysis-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.analysis-item ol {
+    counter-reset: list-counter;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.analysis-item ol li {
+    counter-increment: list-counter;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 30px; /* Adjust for number positioning */
+}
+
+.analysis-item ol li::before {
+    content: counter(list-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
