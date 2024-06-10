@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="intolerance.css">
+    <link rel="stylesheet" href="gain_weight.css">
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="icon">
+            <a href="./index.html"> <img src="./images/logo1.png" class="logo"  alt="" width="230" height="75"></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./food.html">FOOD</a></li>
+                <li><a href="./diet.html">DIET</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+                <li><a href="community.html">COMMUNITY</a></li>
+                <li><a href="./api.html">SEARCH</a></li>
+            </ul>
+        </div>
+    </div> 
+    <div class="container">
+        <h1>Find Recipes</h1>
+        <form id="recipe-form">
+            <label for="intolerance">Choose an intolerance:</label>
+            <select id="intolerance" name="intolerance">
+                <option value="dairy">Dairy</option>
+                <option value="egg">Egg</option>
+                <option value="gluten">Gluten</option>
+                <option value="grain">Grain</option>
+                <option value="peanut">Peanut</option>
+                <option value="seafood">Seafood</option>
+                <option value="sesame">Sesame</option>
+                <option value="shellfish">Shellfish</option>
+                <option value="soy">Soy</option>
+                <option value="sulfite">Sulfite</option>
+                <option value="tree nut">Tree Nut</option>
+                <option value="wheat">Wheat</option>
+            </select>
+            <button type="submit">Get Recipes</button>
+        </form>
+        <div id="recipes"></div>
+    </div>
+    <script src="inntolerance.js"></script>
+</body>
+</html>
