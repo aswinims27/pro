@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <center>
+        <div class="card">
+            <form action="" method="post" onsubmit="return validateForm()">
+                <h2>REGISTRATION</h2>
+                <div class="content">
+                    <div class="input-box">
+                        <label for="name">Full Name</label>
+                        <input type="text" placeholder="Enter Full Name" name="name" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="username">Username</label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter Email Address" name="email" required>
+                        <div class="error" id="emailError"></div>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" placeholder="Enter Phone Number" name="phone" required>
+                        <div class="error" id="phoneError"></div>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" placeholder="Confirm your Password" name="confirmPassword" required>
+                    </div>
+                    &nbsp
+                    <span class="gender-title" style="text-align: left;">Gender</span>
+                    <div class="gender-category">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <div class="alert">
+                    <p>By clicking Sign Up, you agree to our <a href="#">Terms,</a><a href="#">Privacy Policy</a> and <a href="#">Cookies Policy.</a> 
+                        You may receive SMS notifications from us and can opt out at any time.
+                    </p>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </center>
+    
+
+    <script>
+        function validateForm() {
+            const emailInput = document.querySelector('input[name="email"]');
+            const phoneInput = document.querySelector('input[name="phone"]');
+            const emailError = document.getElementById('emailError');
+            const phoneError = document.getElementById('phoneError');
+            
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            const phonePattern = /^[0-9]{10}$/;
+
+            let isValid = true;
+
+            if (!emailPattern.test(emailInput.value)) {
+                emailError.textContent = 'Please enter a valid email address.';
+                emailError.style.color = '#00ADEF';
+                isValid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            if (!phonePattern.test(phoneInput.value)) {
+                phoneError.textContent = 'Phone number must be 10 digits.';
+                phoneError.style.color = '#00ADEF';
+                isValid = false;
+            } else {
+                phoneError.textContent = '';
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
